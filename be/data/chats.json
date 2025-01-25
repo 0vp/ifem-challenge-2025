@@ -1,0 +1,42 @@
+[
+    {
+        "user": "user",
+        "message": "hello how are you",
+        "date": "2025-01-25 18:08:47"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey there! I'm doing great, thanks for asking! How can I help you today with your visit to the emergency department?",
+        "date": "2025-01-25 18:08:49"
+    },
+    {
+        "user": "user",
+        "message": "hello do you still remember my name",
+        "date": "2025-01-25 18:09:22"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey there! I don\u2019t actually remember names or personal details since I\u2019m designed to focus on helping you with your experience in the emergency department. But I'm here to guide you through the process and answer any questions you might have about your visit! How can I assist you today?",
+        "date": "2025-01-25 18:09:24"
+    },
+    {
+        "user": "user",
+        "message": "hello how are you",
+        "date": "2025-01-25 18:09:57"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey there! I'm doing great, thanks for asking! How about you? If you have any questions about the emergency department or what to expect during a visit, I'm here to help!",
+        "date": "2025-01-25 18:09:58"
+    },
+    {
+        "user": "user",
+        "message": "I want to know like something about the",
+        "date": "2025-01-25 18:10:14"
+    },
+    {
+        "user": "bloom",
+        "message": "Sure! When you come to the emergency department, the first step is all about getting checked in and seeing how urgent your situation is. A nurse will assess your condition and assign a triage level from one to five, with one being the most serious. After that, you\u2019ll go through registration, where you\u2019ll share some basic info to create your medical record. Then, you\u2019ll likely wait in the waiting room for a bit. Depending on how busy the department is and how urgent your case is, the wait can be short or a bit longer. When it\u2019s your turn, a doctor will examine you and might order some tests to help figure out what\u2019s going on. After that, they\u2019ll work out a treatment plan for you. Just remember, I\u2019m here to help guide you through the process and answer any questions you might have!",
+        "date": "2025-01-25 18:10:19"
+    }
+]

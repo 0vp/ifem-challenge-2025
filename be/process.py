@@ -1,6 +1,7 @@
 from openai import OpenAI
 import os
 import dotenv
+import time, json
 
 from speech import say
 
@@ -9,6 +10,23 @@ dotenv.load_dotenv()
 client = OpenAI(
     api_key=os.getenv('OPENAI_API_KEY'),  # This is the default and can be omitted
 )
+
+def save_message(user, message):
+    file_path = "./data/chats.json"
+    date = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    data = json.load(open(file_path, "r"))
+    data.append({
+        "user": user,
+        "message": message,
+        "date": date
+    })
+
+    # save last 10 exchanges
+    if len(data) > 10:
+        data = data[-10:]
+
+    with open(file_path, "w") as f:
+        json.dump(data, f, indent=4)
 
 def gen(prompt):
     # chat gpt response
@@ -76,10 +94,12 @@ def process(user_input):
     - The project shouldn’t reveal any personally identifiable information about patients or their health (apart from their non-specific triage category, explained below)
 
     This is the message from the user: {user_input}
+    Here are the last 10 exchanges: {json.load(open("./data/chats.json", "r"))}
     """
 
-    # response = gen(prompt).replace("\n", " ").replace("  ", " ")
-    response = "nah i aint helping u bruv"
+    save_message("user", user_input)
+    response = gen(prompt).replace("\n", " ").replace("  ", " ")
+    save_message("bloom", response)
     print(response)
     say(response)
 
