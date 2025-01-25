@@ -1,6 +1,6 @@
 import React from 'react';
 import Spline from '@splinetool/react-spline';
-
+import Navbar from '../components/navbar';
 import { useState, useEffect } from 'react';
 
 const IndexPage = () => {
@@ -24,10 +24,14 @@ const IndexPage = () => {
 
     useEffect(() => {
         const growPlant = (growth) => {
-            const keyToPress = growth / 10; 
+            const keyToPress = growth / 10 - 1; 
             const handleKeyDown = (event) => {
-                if (event.key === keyToPress.toString()) {
-                    console.log("pressed", keyToPress);
+                if (keyToPress < 0) {
+                    event.key === "0";
+                } else {
+                    if (event.key === keyToPress.toString()) {
+                        console.log("pressed", keyToPress);
+                    }
                 };
             };
             window.addEventListener('keydown', handleKeyDown);
@@ -41,12 +45,16 @@ const IndexPage = () => {
 
     return (
         <>
-            <div className='w-full h-full flex justify-center items-center gap-24'>
-                <div className='w-[55%] h-full'></div>
+            <div className='w-screen h-screen flex gap-12'>
+                <Navbar></Navbar>
+                <div className='w-[55%] h-screen flex flex-col justify-center items-left'>
+                    <h1 className='w-[50%] p-12 text-4xl font-bold text-[#8DCCFF] font-poppins'>Bloom Companion</h1>
+                    <div className='w-full h-[80%] ml-8 mt-4 p-3 bg-[url(/text-bg.png)] bg-cover'></div>
+                </div>
                 <div className='w-[40%] h-screen'>
-                    <div className='p-5 h-full justify-center items-center flex flex-col'>
+                    <div className='p-5 h-full justify-center items-center flex flex-col drop-shadow-xl'>
                         <Spline className="rounded-xl" scene="https://prod.spline.design/6oK-awd-HWIl4RCs/scene.splinecode" />
-                        <div className='absolute bg-white rounded-xl w-40 h-12 bottom-10 right-8'></div>
+                        <div className='absolute bg-white rounded-xl w-40 h-12 bottom-9 right-9'></div>
                     </div>
                 </div>
             </div>
