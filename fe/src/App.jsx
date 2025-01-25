@@ -1,13 +1,15 @@
-import { useState } from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Index from './pages/index.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      home
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path="/" element={<Index />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
