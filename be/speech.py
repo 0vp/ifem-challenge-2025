@@ -1,6 +1,7 @@
 import os
 
 def say(text):
+    # dont roast me for this LOL, it be how it be
     # os.system(f'say {text} -o speech')
     os.system(f'say "{text}"')
 
