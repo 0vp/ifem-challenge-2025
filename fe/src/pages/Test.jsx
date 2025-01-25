@@ -1,9 +1,12 @@
 
 import React, { useState, useRef } from 'react';
 
+const BASE_URL = 'http://localhost:5000';  
+
 export default function Test() {
     const [transcript, setTranscript] = useState('');
     const [interimTranscript, setInterimTranscript] = useState('');
+
     const recognitionRef = useRef(null);
 
     const startListening = () => {
@@ -42,6 +45,21 @@ export default function Test() {
             recognitionRef.current.stop();
             setInterimTranscript(''); // Clear interim transcript on stop
         }
+        
+        fetch(`${BASE_URL}/respond`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ input: transcript + interimTranscript }),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     };
 
     return (

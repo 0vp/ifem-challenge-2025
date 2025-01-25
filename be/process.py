@@ -78,7 +78,8 @@ def process(user_input):
     This is the message from the user: {user_input}
     """
 
-    response = gen(prompt).replace("\n", " ").replace("  ", " ")
+    # response = gen(prompt).replace("\n", " ").replace("  ", " ")
+    response = "nah i aint helping u bruv"
     print(response)
     say(response)
 
