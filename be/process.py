@@ -1,9 +1,10 @@
 from openai import OpenAI
 import os
 import dotenv
-import time, json
+import time, json, random
 
 from speech import say
+import patient
 
 dotenv.load_dotenv()
 
@@ -39,6 +40,7 @@ def gen(prompt):
         ],
         model="gpt-4o-mini",
         stream=False,
+        # max_tokens=50,
     )
 
     return response.choices[0].message.content
@@ -93,12 +95,16 @@ def process(user_input):
     - The project shouldn’t provide any medical advice or clinical decision making
     - The project shouldn’t reveal any personally identifiable information about patients or their health (apart from their non-specific triage category, explained below)
 
-    This is the message from the user: {user_input}
-    Here are the last 10 exchanges: {json.load(open("./data/chats.json", "r"))}
+    This is the current user's status: {str(random.choice(patient.QUEUE_INFORMATION['patients']))}
+
+    This is the message from the user and the one you should respond to: '{user_input}'
+    Here are the last 10 exchanges to help provide context to the conversation: {json.load(open("./data/chats.json", "r"))}
     """
+    print(prompt)
 
     save_message("user", user_input)
     response = gen(prompt).replace("\n", " ").replace("  ", " ")
+    # response = "nah i aint helping u bruh"
     save_message("bloom", response)
     print(response)
     say(response)
@@ -106,4 +112,5 @@ def process(user_input):
     return user_input
 
 if __name__ == '__main__':
-    process("whats is my current process?")
+    # process("whats is my current process?")
+    pass

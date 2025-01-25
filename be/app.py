@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import process
+import process, patient
 
 app = Flask(__name__)
 
@@ -23,4 +23,5 @@ def handle_options(response):
 
 # main driver function
 if __name__ == '__main__':
+    patient.get_queue()
     app.run()
