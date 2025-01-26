@@ -5,49 +5,75 @@ import { useState, useEffect } from 'react';
 import Speech from '../components/Speech';
 
 const IndexPage = () => {
-    
-    const fetchGrowth = async () => {
-        const response = await fetch('https://api.example.com/number');
+    const fetchCleanUp = async () => {
+        try{
+            await fetch('http://127.0.0.1:5000/reset');
+        }
+        catch (e) {
+            console.log(e);
+        }
+
+    }
+    const fetchPosition = async () => {
+        const response = await fetch('http://127.0.0.1:5000/position');
         const data = await response.json();
-        return data.number;
+        console.log(data.rel);
+        return data;
+    }
+    const [position, setPosition] = useState(null);
+    const [rel, setRel] = useState(null);
+
+    const growPlant = (position) => {
+        // Define the growPlant function logic here
+        console.log(`Growing plant at position ${position}`);
     };
 
-    const [growth, setGrowth] = useState(null);
-
     useEffect(() => {
-        const getGrowth = async () => {
-            const num = await fetchGrowth();
-            setGrowth(num);
+        const fetchAndSetPosition = async () => {
+            const pos = await fetchPosition();
+            setRel(pos.rel);
+            setPosition(pos.current);
         };
 
-        getGrowth();
+        const interval = setInterval(fetchAndSetPosition, Math.random() * (5000 - 3000) + 3000);
+
+        return () => clearInterval(interval);
     }, []);
 
-    useEffect(() => {
-        const growPlant = (growth) => {
-            const keyToPress = growth / 10 - 1; 
-            const handleKeyDown = (event) => {
-                if (keyToPress < 0) {
-                    event.key === "0";
-                } else {
-                    if (event.key === keyToPress.toString()) {
-                        console.log("pressed", keyToPress);
-                    }
-                };
-            };
-            window.addEventListener('keydown', handleKeyDown);
+    const simulateKeyPress = (key) => {
+        const event = new KeyboardEvent("keydown", {
+            key: key, // The key you want to simulate
+            code: `Digit${key}`, // Use `DigitX` for numeric keys
+            keyCode: key, // The key code for the key
+            charCode: key,
+            bubbles: true, // Allow the event to bubble up
+        });
 
-            return () => {
-                window.removeEventListener('keydown', handleKeyDown);
-            };
+        // Dispatch the event to the document
+        document.dispatchEvent(event);
+    };
+
+    useEffect(() => {
+
+        if (rel >= 0 && rel <= 9) {
+            simulateKeyPress(rel);
+            console.log("pressed...")
         }
-        growPlant(growth);
-    }, [growth]);
+        growPlant(rel);
+
+    }, [rel]);
+
+    useEffect(() => {
+        return () => {
+            fetchCleanUp();
+            setRel(null);
+        };
+    }, []);
 
     return (
         <>
             <div className='w-screen h-screen flex gap-12'>
-                <Navbar></Navbar>
+                {/* <Navbar></Navbar> */}
                 <div className='w-[55%] h-screen flex flex-col justify-center items-left'>
                     <h1 className='w-[50%] p-12 text-4xl font-bold text-[#8DCCFF] font-poppins'>Bloom Companion</h1>
                     <div className='w-full h-[80%] ml-8 mt-4 p-3 bg-[url(/text-bg.png)] bg-cover'>
@@ -56,8 +82,8 @@ const IndexPage = () => {
                 </div>
                 <div className='w-[40%] h-screen'>
                     <div className='p-5 h-full justify-center items-center flex flex-col drop-shadow-xl'>
-                        <Spline className="rounded-xl" scene="https://prod.spline.design/6oK-awd-HWIl4RCs/scene.splinecode" />
-                        <div className='absolute bg-white rounded-xl w-40 h-12 bottom-9 right-9'></div>
+                        <Spline className="rounded-xl z-[-1]" scene="https://prod.spline.design/6oK-awd-HWIl4RCs/scene.splinecode" />
+                        <div className='absolute bg-blue-300 rounded-xl w-40 h-12 bottom-9 right-9 flex justify-center items-center font-bold text-[20px] bg-blue-300 text-white'>{position} remaining</div>
                     </div>
                 </div>
             </div>

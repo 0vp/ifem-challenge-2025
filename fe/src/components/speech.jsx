@@ -1,10 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const BASE_URL = 'http://localhost:5000';  
 
-export default function Test() {
+export default function Speech() {
     const [transcript, setTranscript] = useState('');
     const [interimTranscript, setInterimTranscript] = useState('');
+    const [response, setResponse] = useState('');
 
     const recognitionRef = useRef(null);
 
@@ -55,19 +56,26 @@ export default function Test() {
             .then((response) => response.json())
             .then((data) => {
                 console.log('Success:', data);
+                setResponse(data.response);
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
     };
+    
 
     return (
-        <div className='w-full h-full flex flex-col gap-[80%] justify-center items-center'>
-            <div className='flex font-poppins justify-left items-center text-center w-full pl-20 pt-10'>
-                <h3 className='font-semibold text-2xl'>Transcript: </h3>
+        <div className='w-full h-full flex flex-col justify-top items-center'>
+            <div className='flex flex-col font-poppins justify-left items-left text-left w-full pl-20 pt-10'>
+                <h3 className='font-semibold text-2xl'>You: </h3>
                 <p className='font-medium text-xl ml-2'>{transcript}{interimTranscript}</p>
+
             </div>
-            <button className='bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl w-[80%]' 
+            <div className='flex flex-col font-poppins justify-left items-left text-left w-full pl-20 pt-10'>
+                <h3 className='font-semibold text-2xl'>Bloom: </h3>
+                <p className='font-medium text-xl ml-2'>{response}</p>
+            </div>
+            <button className='absolute bottom-10 bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl w-[30%]' 
                 onMouseDown={startListening}
                 onMouseUp={stopListening}
                 onTouchStart={startListening}
