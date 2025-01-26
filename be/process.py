@@ -6,6 +6,7 @@ import time, json, random
 from speech import say
 import patient
 
+CHAT_FILE = "./data/chats.json"
 
 dotenv.load_dotenv()
 
