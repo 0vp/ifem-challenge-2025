@@ -40,10 +40,34 @@ export default function Speech() {
         recognitionRef.current.start();
     };
 
-    const talk = () => {
-        const event = new KeyboardEvent('keydown', { key: "q", bubbles: true });
-        console.log(event);
-        document.body.dispatchEvent(event);
+    const talk = (text) => {
+        // talking animation is 4 seconds, split the text into talking 4 second chunks, if the audio is played at 175 wpm
+        // 175 wpm = 2.92 wps
+        // 2.92 wps * 4 seconds = 11.68 words
+        // 11.68 words * 5 characters per word = 58 characters
+
+        // split the text into 58 character chunks
+        const event_down = new KeyboardEvent('keydown', { key: "q", bubbles: true });
+        const event_up = new KeyboardEvent('keyup', { key: "q", bubbles: true });
+
+        // talk
+        const loopNum = Math.ceil(text.length / 58);
+        for (let i = 0; i < loopNum; i++) {
+            setTimeout(() => {
+            document.body.dispatchEvent(event_up);
+            console.log(event_down);
+            document.body.dispatchEvent(event_down);
+            }, i * 4000); // Dispatch event every 4 seconds per loop iteration
+        }
+
+        // idle again LOL
+        setTimeout(() => {
+            const event_down_w = new KeyboardEvent('keydown', { key: "w", bubbles: true });
+            const event_up_w = new KeyboardEvent('keyup', { key: "w", bubbles: true });
+            document.body.dispatchEvent(event_up);
+            document.body.dispatchEvent(event_down_w);
+            document.body.dispatchEvent(event_up_w);
+        }, loopNum * 4000);
     };
 
 
@@ -64,8 +88,8 @@ export default function Speech() {
             .then((response) => response.json())
             .then((data) => {
                 console.log('Success:', data);
-                talk();
                 setResponse(data.response);
+                talk(data.response);
             })
             .catch((error) => {
                 console.error('Error:', error);
