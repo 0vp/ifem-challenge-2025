@@ -13,8 +13,8 @@ def get_queue():
     if not QUEUE_INFORMATION:
         QUEUE_INFORMATION = req.get(f"{BASE_URL}/queue").json()
 
-        while not PATIENT_IDX or QUEUE_INFORMATION["patients"][PATIENT_IDX]["status"]['current_phase'] in ["discharged", "treatment"]:
-            PATIENT_IDX = random.randint(0, len(QUEUE_INFORMATION["patients"]))
+            while PATIENT_IDX is None or QUEUE_INFORMATION["patients"][PATIENT_IDX]["status"]['current_phase'] in ["discharged", "treatment"]:
+            PATIENT_IDX = random.randint(0, len(QUEUE_INFORMATION["patients"]) - 1)  # Fix the range
     return QUEUE_INFORMATION
 
 def get_stats():
@@ -26,6 +26,9 @@ def get_stats():
 
 def get_position():
     global QUEUE_INFORMATION, PATIENT_IDX
+
+    if QUEUE_INFORMATION is None or PATIENT_IDX is None:
+        get_queue()  # Ensure QUEUE_INFORMATION and PATIENT_IDX are initialized
 
     total_waiting = QUEUE_INFORMATION['waitingCount']
     current_pos = QUEUE_INFORMATION['patients'][PATIENT_IDX]['queue_position']['global']
