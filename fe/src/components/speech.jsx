@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 
 const BASE_URL = 'http://localhost:5000';  
@@ -63,8 +62,12 @@ export default function Test() {
     };
 
     return (
-        <div>
-            <button
+        <div className='w-full h-full flex flex-col gap-[80%] justify-center items-center'>
+            <div className='flex font-poppins justify-left items-center text-center w-full pl-20 pt-10'>
+                <h3 className='font-semibold text-2xl'>Transcript: </h3>
+                <p className='font-medium text-xl ml-2'>{transcript}{interimTranscript}</p>
+            </div>
+            <button className='bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl w-[80%]' 
                 onMouseDown={startListening}
                 onMouseUp={stopListening}
                 onTouchStart={startListening}
@@ -72,10 +75,6 @@ export default function Test() {
             >
                 Hold to Speak
             </button>
-            <div>
-                <h3>Transcript:</h3>
-                <p>{transcript}{interimTranscript}</p>
-            </div>
         </div>
     );
 };
