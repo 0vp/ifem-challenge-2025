@@ -2,6 +2,7 @@ import React from 'react';
 import Spline from '@splinetool/react-spline';
 import Navbar from '../components/navbar';
 import { useState, useEffect } from 'react';
+import Speech from '../components/Speech';
 
 const IndexPage = () => {
     
@@ -49,7 +50,9 @@ const IndexPage = () => {
                 <Navbar></Navbar>
                 <div className='w-[55%] h-screen flex flex-col justify-center items-left'>
                     <h1 className='w-[50%] p-12 text-4xl font-bold text-[#8DCCFF] font-poppins'>Bloom Companion</h1>
-                    <div className='w-full h-[80%] ml-8 mt-4 p-3 bg-[url(/text-bg.png)] bg-cover'></div>
+                    <div className='w-full h-[80%] ml-8 mt-4 p-3 bg-[url(/text-bg.png)] bg-cover'>
+                        <Speech></Speech>
+                    </div>
                 </div>
                 <div className='w-[40%] h-screen'>
                     <div className='p-5 h-full justify-center items-center flex flex-col drop-shadow-xl'>
