@@ -1,52 +1,52 @@
 [
     {
         "user": "user",
-        "message": "give me a quick overview of my status",
-        "date": "2025-01-26 09:15:29"
+        "message": "yeah I've been waiting for so long so for so many hours I'm so sick and tired and I just want to see a doctor where is he",
+        "date": "2025-01-26 10:00:04"
     },
     {
         "user": "bloom",
-        "message": "You're currently in the **admitted** phase of your ED visit! \ud83c\udf3c Your triage category is Red (emergent), which means your condition needed urgent attention. You've had your imaging and lab results reported, so you're in a good spot. Just hang tight while you wait for further care! \ud83c\udf1f",
-        "date": "2025-01-26 09:15:31"
+        "message": "You've been waiting for about 46 minutes in the triaged phase, and I can understand how frustrating that is! You're currently in line to see a doctor, and they're on their way! Just hang in there a bit longer; they'll be with you as soon as they can. \ud83c\udf3c",
+        "date": "2025-01-26 10:00:05"
     },
     {
         "user": "user",
-        "message": "Hi how are you",
-        "date": "2025-01-26 09:16:10"
+        "message": "okay sorry for acting",
+        "date": "2025-01-26 10:00:22"
     },
     {
         "user": "bloom",
-        "message": "Feeling bright and chirpy! \ud83c\udf3c How about you? Anything fun on your mind?",
-        "date": "2025-01-26 09:16:11"
+        "message": "You're currently in the \"triaged\" phase, and it looks like you've been waiting for about 46 minutes. The doctor will come to see you soon, just hang tight! \ud83c\udf3c If you have any other questions or need a distraction, I\u2019m here for you!",
+        "date": "2025-01-26 10:00:23"
     },
     {
         "user": "user",
-        "message": "Hi how are you",
-        "date": "2025-01-26 09:16:38"
+        "message": "well I just want to like see a",
+        "date": "2025-01-26 10:02:03"
     },
     {
         "user": "bloom",
-        "message": "Feeling bright and chirpy! \ud83c\udf3c How about you? Anything fun on your mind?",
-        "date": "2025-01-26 09:16:38"
+        "message": "You're currently in the \"registered\" phase, which means you've checked in and your details are in the system. Since you're waiting to see the doctor, just hang in there a bit longer! Your turn will come up soon. If you have more questions or need a distraction, I'm here to help! \ud83c\udf3c",
+        "date": "2025-01-26 10:02:04"
     },
     {
         "user": "user",
-        "message": "no I'm just bored right now can you tell me a joke",
-        "date": "2025-01-26 09:16:50"
+        "message": "no I'm so bored right now can you just can you tell me a story about a duck in a pond",
+        "date": "2025-01-26 10:02:32"
     },
     {
         "user": "bloom",
-        "message": "Why don't scientists trust atoms?  Because they make up everything! \ud83c\udf3c\u2728",
-        "date": "2025-01-26 09:16:51"
+        "message": "Once upon a time, in a serene little pond, lived a cheerful duck named Daisy. Daisy was wonderfully curious and loved exploring her pond home. One sunny day, she decided to invite her friends\u2014the frogs, the fish, and even the dragonflies\u2014for a fun pond party! \ud83e\udd86\u2728  As they gathered, Daisy suggested a game of \"Who Can Make the Biggest Splash?\" The frogs hopped in with a splash, the fish swirled through the water, and Daisy quacked joyfully, creating ripples across the pond. They laughed, played, and enjoyed the warm sunshine together, making it one of the best days ever!  The party ended with a beautiful sunset, and Daisy felt grateful for her friends and the joyful memories they created. And from that day on, the little pond was never short of laughter and fun! \ud83c\udf3c\ud83d\udca6  What a nice day!",
+        "date": "2025-01-26 10:02:35"
     },
     {
         "user": "user",
-        "message": "well that's kind of funny what's my current status right",
-        "date": "2025-01-26 09:17:01"
+        "message": "I'm so frustrated with the system right now please just let me see a doctor right now",
+        "date": "2025-01-26 10:04:19"
     },
     {
         "user": "bloom",
-        "message": "You're currently in the **triaged** phase of your ED visit! \ud83c\udf3c Your triage category is Yellow (urgent), which means you need urgent attention. Your imaging and lab results are both reported, so you're making progress. Just hang in there while you wait for the next steps! \ud83c\udf1f ",
-        "date": "2025-01-26 09:17:02"
+        "message": "I can feel your frustration, and it\u2019s totally understandable! You're currently at the \"triaged\" phase, and there are 6 patients ahead of you. I promise the doctor will be with you as soon as possible. Just a little more patience! If you need another story or a distraction, let me know! \ud83c\udf3c",
+        "date": "2025-01-26 10:04:23"
     }
 ]

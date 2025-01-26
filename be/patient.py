@@ -13,7 +13,7 @@ def get_queue():
     if not QUEUE_INFORMATION:
         QUEUE_INFORMATION = req.get(f"{BASE_URL}/queue").json()
 
-        while PATIENT_IDX is None or QUEUE_INFORMATION["patients"][PATIENT_IDX]["status"]['current_phase'] in ["discharged", "treatment"]:
+        while PATIENT_IDX is None or QUEUE_INFORMATION["patients"][PATIENT_IDX]["status"]['current_phase'] in ["discharged", "treatment", "admitted"]:
             PATIENT_IDX = random.randint(0, len(QUEUE_INFORMATION["patients"]) - 1)  # Fix the range
     return QUEUE_INFORMATION
 
