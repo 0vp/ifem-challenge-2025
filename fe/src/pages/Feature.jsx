@@ -72,7 +72,7 @@ const Feature = () => {
 
     return (
         <>
-            <div className='w-screen h-screen flex gap-12'>
+            <div className='w-screen h-screen flex gap-12 fade-in'>
                 <Navbar></Navbar>
                 <div className='w-[55%] h-screen flex flex-col justify-center items-left'>
                     <img className="w-60" src={`./bloom.png`} alt="logo" />
@@ -81,8 +81,8 @@ const Feature = () => {
                     </div>
                 </div>
                 <div className='w-[40%] h-screen'>
-                    <div className='p-5 h-full justify-center items-center flex flex-col drop-shadow-xl'>
-                        <Spline className="rounded-xl z-[-1]" scene="https://prod.spline.design/6oK-awd-HWIl4RCs/scene.splinecode" />
+                    <div className=' p-5 h-full justify-center items-center flex flex-col drop-shadow-xl'>
+                        <Spline className="rounded-xl z-[-1] " scene="https://prod.spline.design/6oK-awd-HWIl4RCs/scene.splinecode" />
                         <div className='absolute bg-[#65E8FF] rounded-xl w-40 h-12 bottom-9 right-9 flex justify-center items-center font-bold text-[20px] bg-blue-300 text-white'>{position} remaining</div>
                     </div>
                 </div>
