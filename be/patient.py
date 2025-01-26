@@ -35,7 +35,8 @@ def get_position():
 
     return {
         'current': QUEUE_INFORMATION['patients'][PATIENT_IDX]['queue_position']['global'],
-        'max': total_waiting
+        'max': total_waiting,
+        'rel': int(9 * ((total_waiting - current_pos) / total_waiting))
     }
 
 def get_patient():
