@@ -95,7 +95,7 @@ def process(user_input):
     - The project shouldn’t provide any medical advice or clinical decision making
     - The project shouldn’t reveal any personally identifiable information about patients or their health (apart from their non-specific triage category, explained below)
 
-    This is the current user's status: {str(random.choice(patient.QUEUE_INFORMATION['patients']))}
+    This is the current user's status: {str(patient.get_patient())}
 
     This is the message from the user and the one you should respond to: '{user_input}'
     Here are the last 10 exchanges to help provide context to the conversation: {json.load(open("./data/chats.json", "r"))}
@@ -109,7 +109,7 @@ def process(user_input):
     print(response)
     say(response)
 
-    return user_input
+    return response
 
 if __name__ == '__main__':
     # process("whats is my current process?")

@@ -1,36 +1,6 @@
 [
     {
         "user": "user",
-        "message": "but I told you I got hurt with ribs",
-        "date": "2025-01-25 18:25:40"
-    },
-    {
-        "user": "bloom",
-        "message": "Hey Steve! I totally get that you hurt your ribs, and I\u2019m here to help with what you can expect at the ED. So, when you arrive, after initial triage, a nurse will evaluate how serious your injury is. If it's urgent, you\u2019ll be seen quicker. After that, you'll go through registration, and then it\u2019s usually a waiting game until a doctor can examine you. They might order some tests to get a better look at what's going on before deciding on the best treatment for you. If you've got any specific parts of the process you\u2019re curious about, just let me know!",
-        "date": "2025-01-25 18:25:44"
-    },
-    {
-        "user": "user",
-        "message": "okay so what is my injury you should recall from my previous convers",
-        "date": "2025-01-25 18:26:26"
-    },
-    {
-        "user": "bloom",
-        "message": "Hey Steve! I see you've hurt your ribs, and I'm here to help you with the process at the emergency department. When you arrive, a nurse will first check how serious your injury is and assign a triage level. Depending on that, you could either be seen right away or might have to wait a bit in the waiting room. After registration, a doctor will look at your injury, possibly order some tests, and then make a treatment plan. If you have more questions about what to expect or anything specific, just let me know!",
-        "date": "2025-01-25 18:26:28"
-    },
-    {
-        "user": "user",
-        "message": "hello what's your name",
-        "date": "2025-01-25 18:35:27"
-    },
-    {
-        "user": "bloom",
-        "message": "Hey there! I\u2019m Bloom, your friendly flower plant assistant here to help you with the emergency department process. If you have any questions or need to know what to expect during your visit, just ask away!",
-        "date": "2025-01-25 18:35:30"
-    },
-    {
-        "user": "user",
         "message": "what's my current status",
         "date": "2025-01-25 18:35:47"
     },
@@ -48,5 +18,35 @@
         "user": "bloom",
         "message": "Alright, Steve! So, since you\u2019ve already been triaged, the next step is that a doctor will come to assess your condition. They might check the test results that have come back and decide on a treatment plan for your ribs. After that, you'll either receive treatment and get ready to head home or be admitted for further care if needed. Just hang tight, and if you have more questions or need anything else, feel free to ask!",
         "date": "2025-01-25 18:36:12"
+    },
+    {
+        "user": "user",
+        "message": "hello can you hear me",
+        "date": "2025-01-25 19:58:59"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey there! Yes, I can hear you loud and clear. How can I help you today? If you have questions about your visit or the process here in the emergency department, just let me know!",
+        "date": "2025-01-25 19:59:00"
+    },
+    {
+        "user": "user",
+        "message": "hello can you hear me",
+        "date": "2025-01-25 19:59:49"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey there! Yes, I can hear you just fine. What do you need help with today? If you have questions about your visit or the emergency department process, I'm here for you!",
+        "date": "2025-01-25 19:59:51"
+    },
+    {
+        "user": "user",
+        "message": "that's great but do you know what my status",
+        "date": "2025-01-25 20:00:11"
+    },
+    {
+        "user": "bloom",
+        "message": "Right now, you\u2019re in the triage phase, which means you\u2019ve been assessed, and they\u2019ve classified your condition as urgent. You've been waiting for about 87 minutes, so hang in there! The next step will be a doctor coming to take a closer look at your situation and figure out a treatment plan. If you have any more questions about what\u2019s happening or what to expect, just let me know!",
+        "date": "2025-01-25 20:00:12"
     }
 ]

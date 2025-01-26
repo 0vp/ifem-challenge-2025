@@ -11,7 +11,20 @@ def hello_world():
 def respond():
     data = request.json['input']
     processed = process.process(data)
-    return jsonify({'response': f'You sent: {data}'}) 
+    return jsonify({'response': f'{processed}'})
+
+@app.route('/patient', methods=['GET'])
+def patient_info():
+    return jsonify(patient.get_patient())
+
+@app.route('/position', methods=['GET'])
+def position():
+    return jsonify(patient.get_position())
+
+@app.route('/reset', methods=['GET'])
+def reset():
+    patient.reset()
+    return jsonify({'status': 'ok'})
 
 @app.after_request
 def handle_options(response):
@@ -24,4 +37,5 @@ def handle_options(response):
 # main driver function
 if __name__ == '__main__':
     patient.get_queue()
+    patient.get_stats()
     app.run()
