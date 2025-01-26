@@ -1,36 +1,6 @@
 [
     {
         "user": "user",
-        "message": "what's my current status",
-        "date": "2025-01-25 18:35:47"
-    },
-    {
-        "user": "bloom",
-        "message": "Hey Steve! Right now, you\u2019re admitted to the hospital, and it looks like you\u2019ve had some imaging and lab tests done, and those results are all in. You've been here for about 86 minutes, and you were classified as needing urgent care. If you have more questions or need to know what\u2019s coming next, just let me know!",
-        "date": "2025-01-25 18:35:48"
-    },
-    {
-        "user": "user",
-        "message": "yep I want to know what's happening next",
-        "date": "2025-01-25 18:36:10"
-    },
-    {
-        "user": "bloom",
-        "message": "Alright, Steve! So, since you\u2019ve already been triaged, the next step is that a doctor will come to assess your condition. They might check the test results that have come back and decide on a treatment plan for your ribs. After that, you'll either receive treatment and get ready to head home or be admitted for further care if needed. Just hang tight, and if you have more questions or need anything else, feel free to ask!",
-        "date": "2025-01-25 18:36:12"
-    },
-    {
-        "user": "user",
-        "message": "hello can you hear me",
-        "date": "2025-01-25 19:58:59"
-    },
-    {
-        "user": "bloom",
-        "message": "Hey there! Yes, I can hear you loud and clear. How can I help you today? If you have questions about your visit or the process here in the emergency department, just let me know!",
-        "date": "2025-01-25 19:59:00"
-    },
-    {
-        "user": "user",
         "message": "hello can you hear me",
         "date": "2025-01-25 19:59:49"
     },
@@ -48,5 +18,35 @@
         "user": "bloom",
         "message": "Right now, you\u2019re in the triage phase, which means you\u2019ve been assessed, and they\u2019ve classified your condition as urgent. You've been waiting for about 87 minutes, so hang in there! The next step will be a doctor coming to take a closer look at your situation and figure out a treatment plan. If you have any more questions about what\u2019s happening or what to expect, just let me know!",
         "date": "2025-01-25 20:00:12"
+    },
+    {
+        "user": "user",
+        "message": "hello how are you",
+        "date": "2025-01-25 21:39:54"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey there! I'm doing well, thanks for asking! How about you? If there's anything on your mind about your visit or any questions you have about the emergency department process, just let me know!",
+        "date": "2025-01-25 21:39:55"
+    },
+    {
+        "user": "user",
+        "message": "hello my name is Jay",
+        "date": "2025-01-25 21:40:55"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey Jay! Nice to meet you! So, you're currently in the triage phase, which means you've already been assessed. The next step is to wait for a doctor to come and take a closer look at your situation. If you have any questions or need to know more about what\u2019s happening next, feel free to ask!",
+        "date": "2025-01-25 21:40:56"
+    },
+    {
+        "user": "user",
+        "message": "hello so who are you",
+        "date": "2025-01-25 21:42:49"
+    },
+    {
+        "user": "bloom",
+        "message": "Hey Jay! I'm Bloom, your friendly virtual assistant here to help you with your visit to the emergency department. I can guide you through the process, answer questions, and help you understand what to expect. If there's anything specific you're curious about, just let me know!",
+        "date": "2025-01-25 21:42:51"
     }
 ]
