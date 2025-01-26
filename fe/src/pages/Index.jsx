@@ -11,7 +11,7 @@ const IndexPage = () => {
         <img className="w-[60%] absolute bottom-0 left-10" src={'./text-bg.png'} alt="" />
 
         <TrueFocus 
-        sentence="Bloom Companionship"
+        sentence="Bloom Companion"
         manualMode={false}
         blurAmount={5}
         borderColor="blue"
