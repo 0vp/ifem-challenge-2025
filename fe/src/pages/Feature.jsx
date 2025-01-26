@@ -83,7 +83,7 @@ const Feature = () => {
                 <div className='w-[40%] h-screen'>
                     <div className='p-5 h-full justify-center items-center flex flex-col drop-shadow-xl'>
                         <Spline className="rounded-xl z-[-1]" scene="https://prod.spline.design/6oK-awd-HWIl4RCs/scene.splinecode" />
-                        <div className='absolute bg-blue-300 rounded-xl w-40 h-12 bottom-9 right-9 flex justify-center items-center font-bold text-[20px] bg-blue-300 text-white'>{position} remaining</div>
+                        <div className='absolute bg-[#65E8FF] rounded-xl w-40 h-12 bottom-9 right-9 flex justify-center items-center font-bold text-[20px] bg-blue-300 text-white'>{position} remaining</div>
                     </div>
                 </div>
             </div>

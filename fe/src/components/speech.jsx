@@ -84,7 +84,7 @@ export default function Speech() {
                 <h3 className='font-semibold text-2xl'>Bloom: </h3>
                 <p className='font-medium text-xl ml-2'>{response}</p>
             </div>
-            <button className='absolute bottom-10 bg-blue-400 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl w-[30%]' 
+            <button className='absolute bottom-10 bg-blue-400 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded-xl w-[30%]' 
                 onMouseDown={startListening}
                 onMouseUp={stopListening}
                 onTouchStart={startListening}
