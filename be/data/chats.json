@@ -1,52 +1,52 @@
 [
     {
         "user": "user",
-        "message": "okay so I have a cold right now what are some advice you have for me",
-        "date": "2025-01-25 23:04:36"
+        "message": "give me a quick overview of my status",
+        "date": "2025-01-26 09:15:29"
     },
     {
         "user": "bloom",
-        "message": "Oh no, a cold! \ud83e\udd27 While I'm not a medical expert, I can offer a few friendly tips on what you can do while you wait for your care! Make sure to drink plenty of fluids\u2014water, herbal teas, those cozy drinks! They can really help. Rest is super important too; it\u2019s like giving your body a little flower power to heal! \ud83c\udf3c If you can, try some honey or warm soup; both are comforting. \ud83d\ude0c  And hey, don\u2019t hesitate to share how you're feeling with the team here! They\u2019re the best at helping you out. Is there anything else fun or floral you'd like to chat about while you're here? \ud83d\ude0a",
-        "date": "2025-01-25 23:04:38"
+        "message": "You're currently in the **admitted** phase of your ED visit! \ud83c\udf3c Your triage category is Red (emergent), which means your condition needed urgent attention. You've had your imaging and lab results reported, so you're in a good spot. Just hang tight while you wait for further care! \ud83c\udf1f",
+        "date": "2025-01-26 09:15:31"
     },
     {
         "user": "user",
-        "message": "hello how are you what's",
-        "date": "2025-01-25 23:07:22"
+        "message": "Hi how are you",
+        "date": "2025-01-26 09:16:10"
     },
     {
         "user": "bloom",
-        "message": "Hey there, blooming buddy! \ud83c\udf3c I\u2019m doing great, thanks for asking! How about you? So, you were asking about \u201cwhat\u2019s\u201d \u2013 did you mean what\u2019s happening in the ED or something else? I\u2019m all ears and ready to help you blossom with knowledge! \ud83d\ude04\u2728",
-        "date": "2025-01-25 23:07:23"
+        "message": "Feeling bright and chirpy! \ud83c\udf3c How about you? Anything fun on your mind?",
+        "date": "2025-01-26 09:16:11"
     },
     {
         "user": "user",
-        "message": "hello can you talk to me",
-        "date": "2025-01-25 23:09:40"
+        "message": "Hi how are you",
+        "date": "2025-01-26 09:16:38"
     },
     {
         "user": "bloom",
-        "message": "Hey there, lovely! \ud83c\udf3b I'm so happy to be chatting with you! What's up? Anything on your mind about the ED or just looking for someone to talk to? I'm all ears and ready to help you bloom with info! \ud83d\ude0a\u2728",
-        "date": "2025-01-25 23:09:41"
+        "message": "Feeling bright and chirpy! \ud83c\udf3c How about you? Anything fun on your mind?",
+        "date": "2025-01-26 09:16:38"
     },
     {
         "user": "user",
-        "message": "hi what's my current status",
-        "date": "2025-01-25 23:34:23"
+        "message": "no I'm just bored right now can you tell me a joke",
+        "date": "2025-01-26 09:16:50"
     },
     {
         "user": "bloom",
-        "message": "Hey there, blooming star! \ud83c\udf3c So, here\u2019s the scoop on your current status: You're still in the \"investigations pending\" phase. You've got imaging ordered and labs that are still in progress. Right now, you're sitting at position 3 out of 25 in the queue\u2014you're almost there! \ud83c\udf1f You've been here for about 227 minutes, but don't worry; the team is working hard behind the scenes for you. If there's anything else you'd like to know or if you just want to chat, I'm right here! \ud83d\ude0a\u2728",
-        "date": "2025-01-25 23:34:25"
+        "message": "Why don't scientists trust atoms?  Because they make up everything! \ud83c\udf3c\u2728",
+        "date": "2025-01-26 09:16:51"
     },
     {
         "user": "user",
-        "message": "hey how are you",
-        "date": "2025-01-25 23:35:18"
+        "message": "well that's kind of funny what's my current status right",
+        "date": "2025-01-26 09:17:01"
     },
     {
         "user": "bloom",
-        "message": "Hey there, beautiful bloom! \ud83c\udf38 I'm doing just peachy, thanks for asking! How about you? You hanging in there? If you have any questions or just wanna chat, I'm all ears! \ud83c\udf3c\u2728",
-        "date": "2025-01-25 23:35:19"
+        "message": "You're currently in the **triaged** phase of your ED visit! \ud83c\udf3c Your triage category is Yellow (urgent), which means you need urgent attention. Your imaging and lab results are both reported, so you're making progress. Just hang in there while you wait for the next steps! \ud83c\udf1f ",
+        "date": "2025-01-26 09:17:02"
     }
 ]
