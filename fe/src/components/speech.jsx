@@ -40,6 +40,15 @@ export default function Speech() {
         recognitionRef.current.start();
     };
 
+    useEffect(() => {
+        return () => {
+            const keys = ['q', 'w', 'e', 'r', 't', 'y'];
+            const randomKey = keys[Math.floor(Math.random() * keys.length)];
+            const event = new KeyboardEvent('keydown', { key: randomKey });
+            document.dispatchEvent(event);
+        };
+    }, [transcript, interimTranscript]);
+
     const stopListening = () => {
         if (recognitionRef.current) {
             recognitionRef.current.stop();

@@ -73,9 +73,9 @@ const IndexPage = () => {
     return (
         <>
             <div className='w-screen h-screen flex gap-12'>
-                {/* <Navbar></Navbar> */}
+                <Navbar></Navbar>
                 <div className='w-[55%] h-screen flex flex-col justify-center items-left'>
-                    <h1 className='w-[50%] p-12 text-4xl font-bold text-[#8DCCFF] font-poppins'>Bloom Companion</h1>
+                    <img className="w-60" src={`./bloom.png`} alt="logo" />
                     <div className='w-full h-[80%] ml-8 mt-4 p-3 bg-[url(/text-bg.png)] bg-cover'>
                         <Speech></Speech>
                     </div>
