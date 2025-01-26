@@ -40,16 +40,15 @@ export default function Speech() {
         recognitionRef.current.start();
     };
 
-    useEffect(() => {
-        return () => {
-            const keys = ['q', 'w', 'e', 'r', 't', 'y'];
-            const randomKey = keys[Math.floor(Math.random() * keys.length)];
-            const event = new KeyboardEvent('keydown', { key: randomKey });
-            document.dispatchEvent(event);
-        };
-    }, [transcript, interimTranscript]);
+    const talk = () => {
+        const event = new KeyboardEvent('keydown', { key: "q", bubbles: true });
+        console.log(event);
+        document.body.dispatchEvent(event);
+    };
+
 
     const stopListening = () => {
+        
         if (recognitionRef.current) {
             recognitionRef.current.stop();
             setInterimTranscript(''); // Clear interim transcript on stop
@@ -65,6 +64,7 @@ export default function Speech() {
             .then((response) => response.json())
             .then((data) => {
                 console.log('Success:', data);
+                talk();
                 setResponse(data.response);
             })
             .catch((error) => {
